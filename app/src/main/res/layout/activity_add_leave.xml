@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".RequestFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="KEMBALI" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Permohonan"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="26dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputNis"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Judul"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/primary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorPrimary"
+                app:helperTextTextColor="@color/colorRed"
+                app:hintTextColor="@color/colorPrimary"
+                app:startIconDrawable="@drawable/ic_pencil"
+                app:startIconTint="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputStatus"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/select"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/primary"
+                app:helperTextTextColor="@color/colorRed"
+                app:hintTextColor="@color/colorPrimary"
+                app:startIconDrawable="@drawable/ic_info"
+                app:startIconTint="@color/primary">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/et_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Pilih Tanggal"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/primary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorPrimary"
+                app:helperTextTextColor="@color/colorRed"
+                app:hintTextColor="@color/colorPrimary"
+                app:startIconDrawable="@drawable/ic_date"
+                app:startIconTint="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputDesc"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Deskripsi"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/primary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorPrimary"
+                app:helperTextTextColor="@color/colorRed"
+                app:hintTextColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:minLines="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/container_with_dotted_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/dot_line"
+                android:padding="5dp"
+                app:helperText="Required">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_attachment"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dot_line"
+                    android:hint="LAMPIRKAN FILE"
+                    android:textColor="@color/primary"
+                    android:textSize="15sp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="8dp"
+                    app:rippleColor="#33AAAAAA"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="2dp" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btn_change"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/primary"
+                android:text="KIRIM" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
